@@ -22,9 +22,9 @@ Bounce button3 = Bounce(3, 10);  // if a button is too "sensitive" to rapid touc
 Bounce button4 = Bounce(4, 10);  // increase this time.
 
 //Uncomment the follow buttons if you would like to add more buttons
-//Bounce button5 = Bounce(5, 10);  
-//Bounce button6 = Bounce(6, 10);  
-//Bounce button7 = Bounce(7, 10);
+Bounce button5 = Bounce(5, 10);  
+Bounce button6 = Bounce(6, 10);  
+Bounce button7 = Bounce(7, 10);
 //Bounce button8 = Bounce(8, 10);
 //Bounce button9 = Bounce(9, 10);
 
@@ -46,9 +46,9 @@ void setup() {
   pinMode(4, INPUT_PULLUP);
 
 //Uncomment the follow buttons if you would like to add more buttons
-//  pinMode(5, INPUT_PULLUP);
-//  pinMode(6, INPUT_PULLUP);  // Teensy++ LED, may need 1k resistor pullup
-//  pinMode(7, INPUT_PULLUP);
+  pinMode(5, INPUT_PULLUP);
+  pinMode(6, INPUT_PULLUP);  // Teensy++ LED, may need 1k resistor pullup
+  pinMode(7, INPUT_PULLUP);
 //  pinMode(8, INPUT_PULLUP);
 //  pinMode(9, INPUT_PULLUP);
 
@@ -65,8 +65,8 @@ void loop() {
   button4.update();
 
 //Uncomment the follow buttons if you would like to add more buttons
-//  button5.update();
-//  button6.update();
+  button5.update();
+  button6.update();
 //  button7.update();
 //  button8.update();
 //  button9.update();
@@ -97,12 +97,12 @@ void loop() {
   }
 
 //Uncomment the follow buttons if you would like to add more buttons
-//  if (button5.fallingEdge()) {
-//    Keyboard.println("B5 press");
-//  }
-//  if (button6.fallingEdge()) {
-//    Keyboard.println("B6 press");
-//  }
+  if (button5.fallingEdge()) {
+    Keyboard.press(KEY_6);
+  }
+  if (button6.fallingEdge()) {
+    Keyboard.press(KEY_7);
+  }
 //  if (button7.fallingEdge()) {
 //    Keyboard.println("B7 press");
 //  }
@@ -158,12 +158,12 @@ void loop() {
   }
 
 //Uncomment the follow buttons if you would like to add more buttons
-//  if (button5.risingEdge()) {
-//    Keyboard.println("B5 release");
-//  }
-//  if (button6.risingEdge()) {
-//    Keyboard.println("B6 release");
-//  }
+  if (button5.risingEdge()) {
+    Keyboard.release(KEY_6);
+  }
+  if (button6.risingEdge()) {
+    Keyboard.release(KEY_7);
+  }
 //  if (button7.risingEdge()) {
 //    Keyboard.println("B7 release");
 //  }
