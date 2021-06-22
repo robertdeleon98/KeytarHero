@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name keyswitch-kicad-library)(type KiCad)(uri "D:/KiCad/External Libraries/keyswitch-kicad-library")(options "")(descr ""))
+  (lib (name teensy)(type KiCad)(uri "D:/KiCad/External Libraries/teensy.pretty-master")(options "")(descr ""))
 )
